@@ -11,6 +11,8 @@ An extra code (mentioned in index.html) will be loaded with the Digitrust librar
 
 Any partner in cross-domain iframe, trying to access Digitrust Id will implement/copy the function callDigitrustWhileInIframe (mentioned in iframe_2.html), this function will simply try to find the dtLocator iframe and will send a PostMessage to retrive the Digitrust Id, the function accepts a callback as an argument, this callback will execute upon retrieving the Digitrust Id.
 
+The iframe created for dt.html can also be named as dtLocator to avoid two iframes being created.
+
 The solution is inspired from cmpLocator module from CMPs used in GDPR.
 
 # How to use?
@@ -31,5 +33,5 @@ To apply new DNS entries made in hosts file run this command, sudo killall -HUP 
 Now open http://buzz.com/Digitrust-IframeSupport/ in your browser
 If new DNS entries are still not reflecting, then if you are using Chrome browser, open chrome://net-internals/#dns in your browser and click button "Clear host cache".
 
-# Screen shot
+# Screenshot
 ![alt text](https://raw.githubusercontent.com/pm-harshad-mane/Digitrust-IframeSupport/master/ScreenShot.png)
