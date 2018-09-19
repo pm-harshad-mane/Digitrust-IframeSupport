@@ -1,5 +1,18 @@
 # Digitrust-IframeSupport
 
+# Problem
+When publisher loads the Digitrust library on top-frame of the page, the ad-tech partners executing in cross domain iframes on the page are not able to access the Digitrust library and reyrieve the Digitrust Id. As many tags / user syncup happenes in iframes it makes Digitrust Id un-accessable for these partners.
+
+# Solution
+Above code example attempts to create a bridge between Top-frame and iframes that are trying to access Digitrust Id from top-frame.
+
+# How it works
+An extra code will be loaded with the Digitrust library, this code will create a friendly-iframe with name "dtLocator" and will add a meesage event listener which will respond to postMessages coming from iframes to get Digitrust Id
+
+Any partner in iframe trying to access Digitrust Id will implement/copy the function callDigitrustWhileInIframe mentioned in iframe_2.html, this function will simply try to find the dtLocator iframe and will send a PostMessage to retrive the Digitrust Id, the function accepts a callback as an argument, this callback will execute upon retrieving the Digitrust Id.
+
+The solution is inspired from cmpLocator module from CMPs used in GDPR.
+
 # How to use?
 Assuming you already have a webserver running on your machine on port 80.
 
