@@ -30,3 +30,6 @@ Add following enteries to hosts file and save the file
 To apply new DNS entries made in hosts file run this command, sudo killall -HUP mDNSResponder
 Now open http://buzz.com/Digitrust-IframeSupport/ in your browser
 If new DNS entries are still not reflecting, then if you are using Chrome browser, open chrome://net-internals/#dns in your browser and click button "Clear host cache".
+
+# Screen shot
+![alt text](https://raw.githubusercontent.com/pm-harshad-mane/Digitrust-IframeSupport/master/ScreenShot.png)
